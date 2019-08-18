@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 
-import Button from './Button'
+import Button from './Button';
+import './style.css';
 
 class App extends Component{
 
