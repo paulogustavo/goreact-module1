@@ -19,16 +19,21 @@ class Button extends Component{
 }
 
 class App extends Component{
-    handleClick(){
-         alert("Botão clicado!");
+
+    state = {
+        counter: 0 
+    }
+
+    handleClick = () => {
+         this.setState({counter: this.state.counter + 1});
     }
 
     render(){
         return (
         <React.Fragment>
             <h1>Olá, mundo - Módulo 1</h1>
-            <Button onClick={() => alert("Clicou no primeiro botão!")} />
-            <Button onClick={this.handleClick}>Enviar agora</Button>
+            <h2>{this.state.counter}</h2>
+            <Button onClick={this.handleClick}>Incrementar contador</Button>
         </React.Fragment>);
     }
 }
