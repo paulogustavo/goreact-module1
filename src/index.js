@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {render} from 'react-dom';
 
 import Button from './Button';
-import './style.css';
+import './style.scss';
 
 class App extends Component{
 
@@ -17,8 +17,8 @@ class App extends Component{
     render(){
         return (
         <React.Fragment>
-            <h1>Olá, mundo - Módulo 1</h1>
-            <h2>{this.state.counter}</h2>
+            <h1 className="title">Olá, mundo - Módulo 1</h1>
+            <h2 style={{color: "#F00"}}>{this.state.counter}</h2>
             <Button onClick={this.handleClick}>Incrementar contador</Button>
         </React.Fragment>);
     }
